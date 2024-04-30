@@ -3,9 +3,7 @@ package com.dogac.productionschedule.productionschedule.Controller;
 import com.dogac.productionschedule.productionschedule.Entity.Report;
 import com.dogac.productionschedule.productionschedule.Service.ReportService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +20,11 @@ public class ReportController {
     @GetMapping("/all")
     public List<Report> getAllReports(){
         return reportService.getAllReports();
+    }
+
+    @PostMapping("/push")
+    public void updateReport()
+    {
+      reportService.updateReport();
     }
 }

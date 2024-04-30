@@ -33,5 +33,4 @@ public class Report {
     @Column(name = "break_reason")
     private String breakReason;
 
-
 }

@@ -1,6 +1,5 @@
 package com.dogac.productionschedule.productionschedule.Entity;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 
