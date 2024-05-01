@@ -38,6 +38,7 @@ public class ReportService {
             report.setFinishTime(production.getEndTime());
             report.setStartTime(production.getStartTime());
             report.setTotalTime(production.getTotalTime());
+            report.setBreakReason(production.getBreakInfo());
             reportRepository.save(report);
         }
         List<Break> breakList = breakRepository.findAll();
@@ -49,7 +50,6 @@ public class ReportService {
 
             if(breakData.getId() == 1){
                 report.setTotalTime(0.25);
-
             }
             else if(breakData.getId() == 2){
                 report.setTotalTime(0.5);
